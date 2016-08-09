@@ -29,7 +29,8 @@ const images = {
   demo3: require('../assets/talk-demo03.png'),
   thom: require('../assets/thom.gif'),
   thom2: require('../assets/thom2.gif'),
-  books: require('../assets/books-demo.gif')
+  books: require('../assets/books-demo.gif'),
+  dude: require('../assets/dude.gif')
 };
 
 preloader(images);
@@ -84,11 +85,15 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Image src={images.dude.replace("/", "")} height="450px"/>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
             <Heading fit caps size={2} textColor="emberRed">Embracing the Conventions</Heading>
             <List>
               <ListItem><Appear><Text textColor="emberBlack">Difficult to understand, at first</Text></Appear></ListItem>
-              <ListItem><Appear><Text textColor="emberBlack">Generate Ember objects easily</Text></Appear></ListItem>
               <ListItem><Appear><Text textColor="emberBlack">Strong project structure with Ember CLI</Text></Appear></ListItem>
+              <ListItem><Appear><Text textColor="emberBlack">Generate Ember objects easily</Text></Appear></ListItem>
               <ListItem><Appear><Text textColor="emberBlack">Build complex apps without being an expert</Text></Appear></ListItem>
             </List>
           </Slide>
@@ -199,7 +204,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
-            <Text bold textColor="emberBlack">Set value in controller</Text>
+            <Text bold textColor="emberBlack">Update value in controller</Text>
             <Appear>
               <CodePane
                 lang="js"
@@ -235,10 +240,10 @@ export default class Presentation extends React.Component {
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
             <Heading caps size={2} textColor="emberRed">Lessons Learned</Heading>
             <List>
-              <ListItem><Appear><Text textColor="emberBlack">Trust the conventions</Text></Appear></ListItem>
-              <ListItem><Appear><Text textColor="emberBlack">Use state-driven URLs in designing UI</Text></Appear></ListItem>
-              <ListItem><Appear><Text textColor="emberBlack">Understand DDAU and component hierarchy</Text></Appear></ListItem>
-              <ListItem><Appear><Text textColor="emberBlack">Follow the community</Text></Appear></ListItem>
+              <ListItem><Appear><Text textColor="emberBlack">Embrace the conventions</Text></Appear></ListItem>
+              <ListItem><Appear><Text textColor="emberBlack">Follow route-driven patterns in design</Text></Appear></ListItem>
+              <ListItem><Appear><Text textColor="emberBlack">Understand DDAU within component hierarchy</Text></Appear></ListItem>
+              <ListItem><Appear><Text textColor="emberBlack">Get involved with the community</Text></Appear></ListItem>
             </List>
           </Slide>
 
