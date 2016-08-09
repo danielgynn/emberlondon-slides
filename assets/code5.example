@@ -1,0 +1,10 @@
+// controllers/authors/books.js
+export default Ember.Controller.extend({
+  actions : {
+    updateRating(params) {
+      const { item: book, rating } = params;
+      book.set('rating', rating);
+      return book.save();
+    },
+  }
+});

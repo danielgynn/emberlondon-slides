@@ -1,0 +1,5 @@
+<!-- templates/authors/books.hbs -->
+
+{{#each model as |book|}}
+  {{book-item book=book}}
+{{/each}}

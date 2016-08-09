@@ -1,0 +1,10 @@
+// components/book-item.js
+export default Ember.Component.extend({
+  actions: {
+    setRating(params) {
+      const { item: book, rating } = params;
+      book.set('rating', rating);
+      return book.save();
+    }
+  }
+});

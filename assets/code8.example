@@ -1,0 +1,9 @@
+App.Router.map(function() {
+  this.route('authors', function() {
+    this.route('author', { path: '/:author_id' }, function() {
+      this.route('books', function() {
+        this.route('book', { path: '/:book_id' });
+      });
+    });
+  });
+});

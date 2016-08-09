@@ -1,0 +1,8 @@
+// components/book-item.js
+export default Ember.Component.extend({
+  actions: {
+    setRating(item) {
+      this.sendAction('updateRating', item);
+    }
+  }
+});
