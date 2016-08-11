@@ -20,6 +20,7 @@ const images = {
   tomster: require("../assets/tomster.png"),
   lts: require('../assets/lts-tomster.png'),
   ember: require('../assets/emberjs.png'),
+  core: require('../assets/ember-core-diag.png'),
   selfie: require('../assets/self-circle.png'),
   zoey: require('../assets/zoey.png'),
   london: require('../assets/london-tomster.png'),
@@ -30,7 +31,9 @@ const images = {
   thom: require('../assets/thom.gif'),
   thom2: require('../assets/thom2.gif'),
   books: require('../assets/books-demo.gif'),
-  dude: require('../assets/dude.gif')
+  dude: require('../assets/dude.gif'),
+  star: require('../assets/star-demo.png'),
+  ddau: require('../assets/ddau-diag.png')
 };
 
 preloader(images);
@@ -51,7 +54,7 @@ export default class Presentation extends React.Component {
           <Slide transition={["zoom"]} bgColor="emberRed">
             <Image src={images.london.replace("/", "")} height="400px"/>
             <Heading size={2} fit caps lineHeight={1} textColor="primary">
-              Ember.js Experience Report
+              Ember.js, A Beginner&apos;s Journey
             </Heading>
             <Link href="https://twitter.com/danielgynn">
               <Text bold caps textColor="emberBlack">@danielgynn</Text>
@@ -61,9 +64,9 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
             <Image src={images.selfie.replace("/", "")} height="150px"/>
-            <Link href="https://twitter.com/danielgynn"><Text bold caps textColor="emberBlack">@danielgynn</Text></Link>
-            <Text caps textColor="emberBlack">Junior Frontend Developer</Text>
-            <Text caps textColor="emberBlack">🎓 → 💻 → 🐹</Text>
+            <Link href="https://twitter.com/danielgynn"><Text bold caps textColor="emberBlack" margin="20px">@danielgynn</Text></Link>
+            <Text caps textColor="emberBlack" margin="20px">Junior Frontend Developer</Text>
+            <Text caps textColor="emberBlack" margin="50px" textSize="80px">🎓 → 💻 → 🐹</Text>
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
@@ -86,6 +89,11 @@ export default class Presentation extends React.Component {
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
             <Image src={images.dude.replace("/", "")} height="450px"/>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Heading caps size={2} textColor="emberRed">Conventions</Heading>
+            <Image src={images.core.replace("/", "")} height="450px" margin="30px 0"/>
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
@@ -124,7 +132,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
-            <Text bold textColor="emberBlack">Make Assumptions</Text>
+            <Text bold textColor="emberBlack">Don&apos;t need to make assumptions</Text>
             <List>
               <ListItem><Appear><Text textColor="emberBlack">We need four nested routes:</Text></Appear></ListItem>
               <Appear>
@@ -140,11 +148,23 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
-            <Heading fit caps size={2} textColor="emberRed">Data Down, Actions Up</Heading>
+            <Heading fit caps size={2} textColor="emberRed">👇 Data Down, Actions Up 👆</Heading>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Image src={images.ddau.replace("/", "")} height="500px"/>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Heading fit caps size={2} textColor="emberRed">👇 Data Down, Actions Up 👆</Heading>
             <List>
               <ListItem><Appear><Text textColor="emberBlack">Navigate a nested component hierarchy</Text></Appear></ListItem>
               <ListItem><Appear><Text textColor="emberBlack">Bubbling actions up several layers</Text></Appear></ListItem>
             </List>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Image src={images.star.replace("/", "")} height="75%"/>
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
@@ -216,7 +236,7 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
-            <Heading fit caps size={2} textColor="emberRed">Pass action to component call</Heading>
+            <Text bold textColor="emberRed">Pass action to component call</Text>
             <Appear>
               <CodePane
                 lang="markup"
@@ -225,11 +245,14 @@ export default class Presentation extends React.Component {
                 textSize="18px"
               />
             </Appear>
-            <Appear><Image src={images.books.replace("/", "")} height="250px" margin="15px"/></Appear>
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
-            <Heading caps size={2} textColor="emberRed">Community</Heading>
+            <Image src={images.books.replace("/", "")} height="350px" margin="15px"/>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Heading caps size={2} textColor="emberRed">🐹 Community 🐹</Heading>
             <List>
               <ListItem><Appear><Text textColor="emberBlack">Active & inclusive community</Text></Appear></ListItem>
               <ListItem><Appear><Text textColor="emberBlack">Meetups and conferences</Text></Appear></ListItem>
@@ -238,12 +261,34 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
-            <Heading caps size={2} textColor="emberRed">Lessons Learned</Heading>
+            <Heading caps size={2} textColor="emberRed">📝 Lessons Learned 📝</Heading>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Text textColor="emberRed" caps>Lessons Learned</Text>
+            <Heading fit caps size={2} textColor="emberBlack">1. Embrace the Conventions</Heading>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Text textColor="emberRed" caps>Lessons Learned</Text>
+            <Heading fit caps size={2} textColor="emberBlack">2. Follow Route-Driven Patterns in Design</Heading>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Text textColor="emberRed" caps>Lessons Learned</Text>
+            <Heading fit caps size={2} textColor="emberBlack">3. Understand DDAU Flow</Heading>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Text textColor="emberRed" caps>Lessons Learned</Text>
+            <Heading fit caps size={2} textColor="emberBlack">4. Get Involved with the Community</Heading>
+          </Slide>
+
+          <Slide transition={["zoom", "fade"]} bgColor="primary" textFont="helvetica" notes="">
+            <Heading caps size={2} textColor="emberRed">🚀 The Future 🚀</Heading>
             <List>
-              <ListItem><Appear><Text textColor="emberBlack">Embrace the conventions</Text></Appear></ListItem>
-              <ListItem><Appear><Text textColor="emberBlack">Follow route-driven patterns in design</Text></Appear></ListItem>
-              <ListItem><Appear><Text textColor="emberBlack">Understand DDAU within component hierarchy</Text></Appear></ListItem>
-              <ListItem><Appear><Text textColor="emberBlack">Get involved with the community</Text></Appear></ListItem>
+              <ListItem><Appear><Text textColor="emberBlack">Routable Components</Text></Appear></ListItem>
+              <ListItem><Appear><Text textColor="emberBlack">Glimmer 2</Text></Appear></ListItem>
             </List>
           </Slide>
 

@@ -3,6 +3,4 @@
   <img class="book-cover" src="{{book.coverImage}}">
 {{/link-to}}
 
-<div>
-  {{star-rating item=book rating=book.rating on-click=(action "setRating") maxRating=5}}
-</div>
+{{star-rating item=book rating=book.rating on-click=(action "setRating") maxRating=5}}
