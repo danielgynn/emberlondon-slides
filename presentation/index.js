@@ -54,7 +54,7 @@ export default class Presentation extends React.Component {
           <Slide transition={["zoom"]} bgColor="emberRed">
             <Image src={images.london.replace("/", "")} height="400px"/>
             <Heading size={2} fit caps lineHeight={1} textColor="primary">
-              Ember.js, A Beginner&apos;s Journey
+              A Beginner&apos;s Journey into Ember.js
             </Heading>
             <Link href="https://twitter.com/danielgynn">
               <Text bold caps textColor="emberBlack">@danielgynn</Text>
