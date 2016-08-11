@@ -17,9 +17,6 @@ require("spectacle/lib/themes/default/index.css");
 require("../assets/app.css");
 
 const images = {
-  tomster: require("../assets/tomster.png"),
-  lts: require('../assets/lts-tomster.png'),
-  ember: require('../assets/emberjs.png'),
   core: require('../assets/ember-core-diag.png'),
   selfie: require('../assets/self-circle.png'),
   zoey: require('../assets/zoey.png'),
